@@ -5,9 +5,10 @@
 }
 body {background: #2c2c2c;}
 #wrap {min-width: 1020px;}
-#header {width: 100%; min-width: 1020px; height: 90px; background: rgba(0,0,0,0.6);}
+#header {width: 100%; min-width: 1020px; height: 90px; background: rgba(0,0,0,0.6); position: absolute; z-index: 500; }
 
-#header .inner {display: flex; position: relative; width: 1020px; margin: 0 auto;}
+/* header */
+#header .inner {position: relative; width: 1020px; margin: 0 auto; display: flex;}
 #header .logo {margin-top: 15px;}
 #header .gnb_list {display: inline-block; width: 150px;}
 #header .gnb_list:first-child {margin-left: 43px;}
@@ -24,20 +25,28 @@ body {background: #2c2c2c;}
 #header .item_05 {background: url(../img/tnavi04_off.png); background-position: center 15px;}
 #header .item_06 {background: url(../img/tnavi01_off.png); background-position: center 15px;}
 
+/* container */
+#main_slider {position: relative; min-height: 200px; }
+#main_slider .main_slogan {position: absolute; top: 350px; left: 50%; width: 1020px; margin: 0; margin-left: -510px; z-index: 10;}
+
+#main_slider .slider_wrapper {position: relative; margin: 0 auto;}
+#main_slider .slider_list {width: 100%; overflow: hidden; position: relative; height: 760px;}
+#main_slider .slider_list .item {width: 100%; min-width: 1920px; position: absolute; left: 0; background-size: cover; background-repeat: no-repeat; background-position: center top; height: 760px;}
+#main_slider .slider_list .bg_01 {background-image: url(../img/main_slide04.jpg);}
+#main_slider .slider_list .bg_02 {background-image: url(../img/main_slide05.jpg);}
+#main_slider .slider_list .bg_03 {background-image: url(../img/main_slide07.jpg);}
+
+#main_slider .slider_pager {position: absolute; top: 650px; left: 260px;}
+#main_slider .slider_pager span {display: inline-block;}
+#main_slider .slider_pager span.active a {background-color: #fff; height: 2px;}
+#main_slider .slider_pager a {display: inline-block; background-color: #ea711d; font-size: 0; width: 41px; height: 1px;}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* content */
+#content {background: url(../img/main_sec01.jpg) no-repeat center top; text-align: center; height: 749px; width: 100%; margin: 0 auto; }
+#content .newsroom_area {padding-top: 90px;}
+#content .title {font-size: 28px; line-height: 30px; color: #fff; letter-spacing: 0.025em; padding: 23px 0;}
+#content .desc {}
 
 
 
