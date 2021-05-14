@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* color: #ea711d; border-bottom: 2px solid #ea711d; */
+*{
+    box-sizing: border-box;
+}
+body {background: #2c2c2c;}
+#wrap {min-width: 1020px;}
+#header {width: 100%; min-width: 1020px; height: 90px; background: rgba(0,0,0,0.6);}
+
+#header .inner {display: flex; position: relative; width: 1020px; margin: 0 auto;}
+#header .logo {margin-top: 15px;}
+#header .gnb_list {display: inline-block; width: 150px;}
+#header .gnb_list:first-child {margin-left: 43px;}
+#header .gnb_list a {display: block; letter-spacing: 0.025em; padding: 36px 0 0; height: 90px; font-weight: bold; font-size: 15px; color: #fff; text-align: center;}
+#header .gnb_list a:hover,#header .gnb_list a:focus {color: #ea711d; border-bottom: 2px solid #ea711d;}
+#header .gnb_right {position: absolute; right: 0;}
+#header .gnb_right li {position: relative; margin-left: 17px; width: 90px; height: 90px; background-color: rgba(0,0,0,0.6); margin-top: 2px;}
+#header .gnb_right li a {display: block; overflow: hidden; white-space: nowrap; font-size: 12px; line-height: 20px; color: #fff; text-align: center; background-repeat: no-repeat; padding-top: 60px;}
+#header .gnb_right li:first-child {margin-top: 0;}
+#header .item_01 {background: url(../img/btn_brc_menu_off.png); background-position: center 25px;}
+#header .item_02 {background: url(../img/tnavi05_off.png); background-position: center 15px;}
+#header .item_03 {background: url(../img/tnavi02_off.png); background-position: center 15px;}
+#header .item_04 {background: url(../img/tnavi03_off.png); background-position: 30px 15px;}
+#header .item_05 {background: url(../img/tnavi04_off.png); background-position: center 15px;}
+#header .item_06 {background: url(../img/tnavi01_off.png); background-position: center 15px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
