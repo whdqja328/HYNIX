@@ -86,21 +86,26 @@ body {background: #050528; font-family: 'Chakra Petch', sans-serif;}
 #content .social_area li:nth-child(6):hover .news_icon_06 {background-image: url(../img/main_icon_12_over.png);}
 
 
-#content .investor_area {}
 #content .investor_area .desc {padding-bottom: 36px;}
-#content .investor_area .inner {margin-top: 36px;}
+#content .investor_area .inner {margin-top: 46px; padding-bottom: 0;}
 #content .investor_area .boxwrap {overflow: hidden; border-top: 1px solid #5a5a5a; border-bottom: 1px solid #5a5a5a; padding: 10px 0;}
 
-#content .investor_area .boxwrap .ir_left {float: left; padding: 60px 30px 6px; background: rgba(0,0,0,0.3); width: 40%;}
-#content .investor_area .boxwrap .ir_right {display: flex; flex-wrap: wrap; padding: 0 15px;}
-#content .investor_area .boxwrap .ir_right li {display: inline-block; width: 33.33333333%; padding: 0 15px;}
-#content .investor_area .boxwrap .ir_right li:nth-child(-n+3) a {border-bottom: 1px solid #5a5a5a;}
-#content .investor_area .boxwrap .ir_right li a {height: 130px; display: block; padding-top: 80px; margin: 20px 0; color: #fff; font-size: 16px; background: url(../img/main_icon_01.png) no-repeat center top;}
+#content .boxwrap .ir_left {float: left; padding: 60px 30px 6px; width: 40%;}
+#content .boxwrap .ir_right {display: flex; flex-wrap: wrap; padding: 0 15px; margin-top: 30px;}
+#content .boxwrap .ir_right li {display: inline-block; width: 33.33333333%; padding: 0 15px;}
+#content .boxwrap .ir_right li:nth-child(-n+3) a {border-bottom: 1px solid #5a5a5a;}
+#content .boxwrap .ir_right li a {height: 130px; display: block; padding-top: 80px; margin: 20px 0; color: #fff; font-size: 16px; background-position: center top; background-repeat: no-repeat;}
+#content .boxwrap .ir_right li:nth-child(1) a{background-image: url(../img/main_icon_01.png);}
+#content .boxwrap .ir_right li:nth-child(2) a{background-image: url(../img/main_icon_02.png);}
+#content .boxwrap .ir_right li:nth-child(3) a{background-image: url(../img/main_icon_03.png);}
+#content .boxwrap .ir_right li:nth-child(4) a{background-image: url(../img/main_icon_04.png);}
+#content .boxwrap .ir_right li:nth-child(5) a{background-image: url(../img/main_icon_05.png);}
+#content .boxwrap .ir_right li:nth-child(6) a{background-image: url(../img/main_icon_06.png);}
 
 
 
-
-
+#content .gn_area {padding-top: 140px; background: url(../img/main_sec04.jpg) no-repeat center top;}
+#content .gn_area .inner {top: -30px; padding: 53px 0 0; background-color: #050528;}
 
 
 
