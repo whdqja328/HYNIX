@@ -11,7 +11,7 @@ a:hover {color: #ea711d;}
 
 /* 폰트 초기화 */
 body, input, textarea, select, button, table {
-    font-family:'Noto Sans KR', 'Nanum Gothic', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #222; font-size: 13px; line-height: 1.5;}
+    font-family:'NanumSquare','Malgun Gothic','맑은 고딕','Chakra Petch',Dotum,'돋움',sans-serif; color: #222; font-size: 13px; line-height: 1.7em;}
 
 /* 폰트 스타일 초기화 */
 em,address {font-style: normal;}
