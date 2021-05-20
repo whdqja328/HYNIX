@@ -5,13 +5,13 @@ body {background-color: #050528;}
 #header {width: 100%; min-width: 1020px; height: 90px; background-color: rgba(0,0,0,0.6); position: absolute; z-index: 500;}
 
 /* header */
-#header .inner {position: relative; width: 1020px; margin: 0 auto; display: flex;}
+#header .inner {width: 1020px; margin: 0 auto; display: flex;}
 #header .logo {margin-top: 15px;}
 #header .gnb_list {display: inline-block; width: 150px;}
 #header .gnb_list:first-child {margin-left: 43px;}
-#header .gnb_list a {display: block; letter-spacing: 0.025em; padding: 36px 0 0; height: 90px; font-weight: bold; font-size: 15px; color: #fff; text-align: center;}
-#header .gnb_list a:hover,#header .gnb_list a:focus {color: #ea711d; border-bottom: 2px solid #ea711d;}
-#header .gnb_right {position: absolute; right: 0;}
+#header .gnb_list > a {display: block; letter-spacing: 0.025em; padding: 36px 0 0; height: 90px; font-weight: bold; font-size: 15px; color: #fff; text-align: center;}
+#header .gnb_list > a:hover,#header .gnb_list > a:focus {color: #ea711d; border-bottom: 2px solid #ea711d;}
+#header .gnb_right {position: absolute; right: 200px;}
 #header .gnb_right li {position: relative; margin-left: 17px; width: 90px; height: 90px; background-color: rgba(0,0,0,0.6); margin-top: 2px;}
 #header .gnb_right li a {display: block; overflow: hidden; white-space: nowrap; font-size: 12px; line-height: 20px; color: #fff; text-align: center; background-repeat: no-repeat; padding-top: 60px;}
 #header .gnb_right li:first-child {margin-top: 0; background: none;}
@@ -21,13 +21,40 @@ body {background-color: #050528;}
 #header .gnb_right li:nth-child(4):hover a { background: url(../img/tnavi03_on.png) no-repeat 30px 15px; }
 #header .gnb_right li:nth-child(5):hover a { background: url(../img/tnavi04_on.png) no-repeat center 15px; }
 #header .gnb_right li:nth-child(6):hover a { background: url(../img/tnavi01_on.png) no-repeat center 15px; }
-
 #header .item_01 {background: url(../img/btn_brc_menu_off.png); background-position: center 25px;}
 #header .item_02 {background: url(../img/tnavi05_off.png); background-position: center 15px;}
 #header .item_03 {background: url(../img/tnavi02_off.png); background-position: center 15px;}
 #header .item_04 {background: url(../img/tnavi03_off.png); background-position: 30px 15px;}
 #header .item_05 {background: url(../img/tnavi04_off.png); background-position: center 15px;}
 #header .item_06 {background: url(../img/tnavi01_off.png); background-position: center 15px;}
+
+#header .gnb_depth {position: absolute; top: 90px; left: 0; width: 100%; height: 350px; background: #ebf2f2; z-index: 1;}
+#header .gnb_depth > div {position: relative; padding: 15px 0 16px; margin: 0 auto; width: 1020px;}
+#header .gnb_depth .sub_tit {position: absolute; left: 0; font-size: 22px; line-height: 45px;}
+#header .gnb_depth .depth_wrap {width: 864px; position: absolute; right: 0;}
+#header .gnb_depth .depth_wrap ul {margin: 5px 0;}
+#header .gnb_depth .depth_wrap>ul>li {float: left; width: 212px; height: 100%; padding: 0 12px 20px;}
+#header .gnb_depth .depth_wrap li:nth-child(5) {clear: both;}
+#header .gnb_depth .depth_wrap>ul>li>a {display: block; line-height: 16px; padding: 8px 0; font-weight: 600; border-bottom: 1px solid #ddd; letter-spacing: 0.01em;}
+#header .gnb_depth .depth_wrap>ul>li>ul {margin-top: 8px;}
+#header .gnb_depth .depth_wrap>ul>li>ul>li {overflow: hidden; margin-top: 3px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* container */
 #main_slider {position: relative; min-height: 200px; }
