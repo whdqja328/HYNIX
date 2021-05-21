@@ -24,7 +24,7 @@
     </div>
     <div id="wrap">
         <!-- header -->
-        <div id="header">
+        <div id="header" class="on">
             <div class="inner">
                 <h1 class="logo"><a href="#"><img src="assets/img/logo_w.png" alt="SK하이닉스"></a></h1>
                 <ul class="gnb">
@@ -227,13 +227,13 @@
                                 <div class="depth_wrap">
                                     <ul>
                                         <li>
-                                            <a href="#">Technical Support</a>                                           
+                                            <a href="#">Technical Support</a>
                                         </li>
                                         <li>
-                                            <a href="#">RMA/Warranty</a>                                           
+                                            <a href="#">RMA/Warranty</a>
                                         </li>
                                         <li>
-                                            <a href="#">품질방침/국제규격인증</a>                                            
+                                            <a href="#">품질방침/국제규격인증</a>
                                         </li>
                                         <li>
                                             <a href="#">산업보안방침</a>
@@ -254,7 +254,9 @@
                     </li>
                 </ul>
                 <ul class="gnb_right">
-                    <li><a href="#" class="item_01"></a></li>
+                    <li>
+                        <a href="#" class="item_01" title="Sitemap"></a>
+                    </li>
                     <li><a href="#" class="item_02">LANGUAGE</a></li>
                     <li><a href="#" class="item_03">CAREERS</a></li>
                     <li><a href="#" class="item_04">Newsroom</a></li>
@@ -505,16 +507,30 @@
         </div>
     </div>
     <script>
-        const gnbList = document.querySelectorAll('.gnb_list');
-        
-        for(let i = 0; i < gnbList.length; i++){
-            gnbList[i].addEventListener('mouseenter',function(e){
+        const $gnbList = document.querySelectorAll('.gnb_list');
+        const $header = document.querySelector('#header');
+        let $gnbRight = document.querySelectorAll('.gnb_right>li')
+        let $logoImg = document.querySelector('.logo img');
+
+        $header.classList.remove('on');
+
+        for(let i = 0; i < $gnbList.length; i++){
+            $gnbList[i].addEventListener('mouseenter',function(e){
                 e.target.classList.add('on');
-            })
-            gnbList[i].addEventListener('mouseleave',function(e){
+                $header.classList.add('on');
+                $logoImg.src = 'assets/img/logo_on.png'
+                $gnbRight[0].style.zindex = 9999;
+                $gnbRight[0].style.backgroundColor = '#050528';
+            });
+
+            $gnbList[i].addEventListener('mouseleave',function(e){
                 e.target.classList.remove('on');
-            })
+                $header.classList.remove('on');
+                $logoImg.src = 'assets/img/logo_w.png'
+                $gnbRight[0].style.background = 'none';
+            });
         }
+        
     </script>
 </body>
 
