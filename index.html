@@ -257,7 +257,18 @@
                     <li>
                         <a href="#" class="item_01" title="Sitemap"></a>
                     </li>
-                    <li><a href="#" class="item_02">LANGUAGE</a></li>
+                    <li>
+                        <a href="#" class="item_02">LANGUAGE</a>
+                        <div class="lang_box">
+                            <ul>
+                                <li class="on"><a href="#">KOR</a></li>
+                                <li><a href="#">ENG</a></li>
+                                <li><a href="#">CHN(简)</a></li>
+                                <li><a href="#">CHN(繁)</a></li>
+                                <li><a href="#">JPN</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="#" class="item_03">CAREERS</a></li>
                     <li><a href="#" class="item_04">Newsroom</a></li>
                     <li><a href="#" class="item_05">FACEBOOK</a></li>
@@ -507,14 +518,46 @@
         </div>
     </div>
     <script>
-        const $gnbList = document.querySelectorAll('.gnb_list');
+        const $gnbList = document.querySelector('.gnb');
         const $header = document.querySelector('#header');
         let $gnbRight = document.querySelectorAll('.gnb_right>li')
         let $logoImg = document.querySelector('.logo img');
 
         $header.classList.remove('on');
 
-        for(let i = 0; i < $gnbList.length; i++){
+
+        let arr = $gnbList.children;
+
+        const addClass = function () {
+            this.classList.add('on');
+            $header.classList.add('on');
+            $logoImg.src = 'assets/img/logo_on.png'
+            $gnbRight[0].style.zindex = 9999;
+            $gnbRight[0].style.backgroundColor = '#050528';
+        }
+
+        const removeClass = function () {
+            this.classList.remove('on');
+            $header.classList.remove('on');
+            $logoImg.src = 'assets/img/logo_w.png'
+            $gnbRight[0].style.backgroundColor = '';
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].addEventListener('mouseenter',addClass)
+            arr[i].addEventListener('mouseleave',removeClass)
+        }
+
+
+
+
+
+
+
+
+
+
+        /* for(let i = 0; i < $gnbList.length; i++){
             $gnbList[i].addEventListener('mouseenter',function(e){
                 e.target.classList.add('on');
                 $header.classList.add('on');
@@ -529,8 +572,7 @@
                 $logoImg.src = 'assets/img/logo_w.png'
                 $gnbRight[0].style.background = 'none';
             });
-        }
-        
+        } */
     </script>
 </body>
 
