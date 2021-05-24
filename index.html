@@ -281,21 +281,36 @@
 
         <!-- container -->
         <div id="container">
-            <div id="main_slider">
-                <div class="main_slogan"><img src="assets/img/main_slogan_ko.png"
-                        alt="We Do Technolgy 첨단기술의 중심, 더 나은 세상을 만듭니다"></div>
-                <div class="slider_wrapper">
-                    <ul class="slider_list">
-                        <li class="item bg_01"></li>
-                        <li class="item bg_02"></li>
-                        <li class="item bg_03"></li>
-                    </ul>
-                    <div class="slider_pager">
-                        <span class="active"><a href="#">1</a></span>
-                        <span><a href="#">2</a></span>
-                        <span><a href="#">3</a></span>
-                    </div>
+            <div class="slide_wrap">
+                <div class="main_slogan">
+                    <img src="assets/img/main_slogan_ko.png" alt="We Do Technolgy 첨단기술의 중심, 더 나은 세상을 만듭니다">
                 </div>
+                <!-- slide_container -->
+                <div class="slide_container">
+                    <!-- slide  -->
+                    <div class="slide">
+                        <img src="assets/img/main_slide07.jpg" alt="">
+                    </div>
+                    <!-- //slide  -->
+                    <!-- slide  -->
+                    <div class="slide">
+                        <img src="assets/img/main_slide04.jpg" alt="">
+                    </div>
+                    <!-- //slide  -->
+                    <!-- slide  -->
+                    <div class="slide">
+                        <img src="assets/img/main_slide05.jpg" alt="">
+                    </div>
+                    <!-- //slide  -->
+                </div>
+                <div class="pager">
+                    <a href="#" data-idx="0"><span class="ir_so">1페이지</span></a>
+                    <a href="#" data-idx="1"><span class="ir_so">2페이지</span></a>
+                    <a href="#" data-idx="2"><span class="ir_so">3페이지</span></a>
+                    <a href="#" data-idx="3"><span class="ir_so">4페이지</span></a>
+                    <a href="#" data-idx="4"><span class="ir_so">5페이지</span></a>
+                </div>
+                <!-- //slide_container -->
             </div>
         </div>
         <!-- //container -->
@@ -543,7 +558,75 @@
             $header.classList.remove('on')
         })
 
+        // Slider
+        document.addEventListener('DOMContentLoaded', function () {
 
+            // 변수 지정    
+            const slideWrap = document.querySelector('.slide_wrap'),
+                slideContainer = document.querySelector('.slide_container'),
+                slides = document.querySelectorAll('.slide'),
+                pagerBtn = document.querySelectorAll('.pager a');
+
+            let slideCount = slides.length,
+                currentIndex = 0,
+                timer = null;
+
+            // 슬라이드 가로로 배열하기
+            for (let i = 0; i < slideCount; i++) {
+                slides[i].style.left = i * 100 + '%';
+            }
+
+            // 슬라이드 이동함수
+            function goToSlide(idx) {
+                slideContainer.classList.add('animate');
+                slideContainer.style.left = -100 * idx + '%';
+                currentIndex = idx;
+
+                for (let y = 0; y < pagerBtn.length; y++) {
+                    pagerBtn[y].classList.remove('on');
+                }
+                pagerBtn[idx].classList.add('on');
+            }
+
+            goToSlide(0);
+
+            //자동 슬라이드 함수
+            function startAutoSlide() {
+
+                timer = setInterval(function () {
+                    let nextIdx = (currentIndex + 1) % slideCount;
+
+                    goToSlide(nextIdx);
+
+                }, 4500);
+            }
+
+            startAutoSlide();
+
+            // 슬라이드 정지 함수
+            function stopAutoSlide() {
+                clearInterval(timer);
+            }
+
+            //slideWrap에 마우스가 들어오면 할일, 나가면 할일
+            slideWrap.addEventListener('mouseenter', function () {
+                stopAutoSlide();
+            });
+
+            slideWrap.addEventListener('mouseleave', function () {
+                startAutoSlide();
+            });
+
+            //pager로 슬라이드 이동하기
+            for (let a = 0; a < pagerBtn.length; a++) {
+                pagerBtn[a].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    let pagerNum = e.target.getAttribute('data-idx');
+                    goToSlide(pagerNum);
+
+                });
+            }
+        });
     </script>
 </body>
 
