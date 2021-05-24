@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicons.png">
     <!--[if lt IE 9]>
 	<link rel="stylesheet" href="https://mis-prod-koce-homepage-cdn-01-ep.azureedge.net/resource/css/kor/ie8.css">
 	<script src="https://mis-prod-koce-homepage-cdn-01-ep.azureedge.net/resource/js/plugins/respond.min.js"></script>
@@ -24,9 +25,9 @@
     </div>
     <div id="wrap">
         <!-- header -->
-        <div id="header" class="on">
-            <div class="inner">
-                <h1 class="logo"><a href="#"><img src="assets/img/logo_w.png" alt="SK하이닉스"></a></h1>
+        <div id="header">
+            <div class="inner clearfix">
+                <h1 class="logo"><a href="#" title="SK하이닉스"></a></h1>
                 <ul class="gnb">
                     <li class="gnb_list">
                         <a href="#" class="list_item">ABOUT US</a>
@@ -254,14 +255,14 @@
                     </li>
                 </ul>
                 <ul class="gnb_right">
-                    <li>
+                    <li class="sitemap">
                         <a href="#" class="item_01" title="Sitemap"></a>
                     </li>
                     <li>
                         <a href="#" class="item_02">LANGUAGE</a>
                         <div class="lang_box">
                             <ul>
-                                <li class="on"><a href="#">KOR</a></li>
+                                <li><a href="#">KOR</a></li>
                                 <li><a href="#">ENG</a></li>
                                 <li><a href="#">CHN(简)</a></li>
                                 <li><a href="#">CHN(繁)</a></li>
@@ -518,65 +519,30 @@
         </div>
     </div>
     <script>
-        const $gnbList = document.querySelector('.gnb');
-        const $header = document.querySelector('#header');
-        let $gnbRight = document.querySelectorAll('.gnb_right>li')
-        let $logoImg = document.querySelector('.logo img');
+        const $gnbList = document.querySelectorAll('.gnb_list');
+        const $header = document.querySelector('#header')
+        const $gnb = document.querySelector('.gnb');
+        const $gnbRight = document.querySelector('.gnb_right')
 
-        $header.classList.remove('on');
-
-
-        let arr = $gnbList.children;
-
-        const addClass = function () {
-            this.classList.add('on');
-            $header.classList.add('on');
-            $logoImg.src = 'assets/img/logo_on.png'
-            $gnbRight[0].style.zindex = 9999;
-            $gnbRight[0].style.backgroundColor = '#050528';
+        const addClass = function (e) {
+            e.target.classList.add('on');
         }
 
-        const removeClass = function () {
-            this.classList.remove('on');
-            $header.classList.remove('on');
-            $logoImg.src = 'assets/img/logo_w.png'
-            $gnbRight[0].style.backgroundColor = '';
+        const removeClass = function (e) {
+            e.target.classList.remove('on');
         }
 
-
-        for (let i = 0; i < arr.length; i++) {
-            arr[i].addEventListener('mouseenter',addClass)
-            arr[i].addEventListener('mouseleave',removeClass)
+        for (let i = 0; i < $gnbList.length; i++) {
+            $gnbList[i].addEventListener('mouseenter', addClass)
+            $gnbList[i].addEventListener('mouseleave', removeClass)
         }
 
-        
-
-
-
-
-
-
-
-
-
-
-
-        /* for(let i = 0; i < $gnbList.length; i++){
-            $gnbList[i].addEventListener('mouseenter',function(e){
-                e.target.classList.add('on');
-                $header.classList.add('on');
-                $logoImg.src = 'assets/img/logo_on.png'
-                $gnbRight[0].style.zindex = 9999;
-                $gnbRight[0].style.backgroundColor = '#050528';
-            });
-
-            $gnbList[i].addEventListener('mouseleave',function(e){
-                e.target.classList.remove('on');
-                $header.classList.remove('on');
-                $logoImg.src = 'assets/img/logo_w.png'
-                $gnbRight[0].style.background = 'none';
-            });
-        } */
+        $gnb.addEventListener('mouseenter', function () {
+            $header.classList.add('on')
+        })
+        $gnb.addEventListener('mouseleave', function () {
+            $header.classList.remove('on')
+        })
     </script>
 </body>
 
