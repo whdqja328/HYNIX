@@ -26,14 +26,15 @@ body {background-color: #050528;}
 #header .gnb_right>li:first-child:hover {background-color: #050528;}
 #header .gnb_right>li:nth-child(1):hover { background-color: #050528;}
 #header .gnb_right>li:nth-child(2):hover a { background: url(../img/tnavi05_on.png) no-repeat center 15px; }
+#header .gnb_right>li:nth-child(2):hover .lang_box {display: block;}
 #header .gnb_right>li:nth-child(3):hover a { background: url(../img/tnavi02_on.png) no-repeat center 15px; }
 #header .gnb_right>li:nth-child(4):hover a { background: url(../img/tnavi03_on.png) no-repeat 30px 15px; }
 #header .gnb_right>li:nth-child(5):hover a { background: url(../img/tnavi04_on.png) no-repeat center 15px; }
 #header .gnb_right>li:nth-child(6):hover a { background: url(../img/tnavi01_on.png) no-repeat center 15px; }
 #header .gnb_right .lang_box {position: absolute; left: -52px; top: 1px; display: none;}
-#header .gnb_right .lang_box.on {display: block;}
 #header .gnb_right .lang_box ul {width: 60px;}
 #header .gnb_right .lang_box li {font-weight: bold; text-align: center; background: #fff; width: 50px; height: 50px; font-size: 11px; margin-bottom: 1px;}
+#header .gnb_right .lang_box li:first-child {background-color: #050528;}
 #header .gnb_right .lang_box li:hover {background-color: #050528;}
 #header .gnb_right .lang_box li a { color: #ea711d; line-height: 50px;}
 #header .item_01 {background: url(../img/btn_brc_menu_off.png); background-position: center 25px;}
@@ -55,23 +56,6 @@ body {background-color: #050528;}
 #header .gnb_depth .depth_wrap>ul>li>ul {margin-top: 8px;}
 #header .gnb_depth .depth_wrap>ul>li>ul>li {overflow: hidden; margin-top: 3px;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* container */
 #main_slider {position: relative; min-height: 200px; }
 #main_slider .main_slogan {position: absolute; top: 350px; left: 50%; width: 1020px; margin: 0; margin-left: -510px; z-index: 10;}
@@ -87,7 +71,6 @@ body {background-color: #050528;}
 #main_slider .slider_pager span {display: inline-block;}
 #main_slider .slider_pager span.active a {background-color: #fff; height: 2px;}
 #main_slider .slider_pager a {display: inline-block; background-color: #ea711d; font-size: 0; width: 41px; height: 1px;}
-
 
 /* content */
 #content {background: url(../img/main_sec01.jpg) no-repeat center top; text-align: center; width: 100%; margin: 0 auto; font-family: 'Chakra Petch',sans-serif;}
