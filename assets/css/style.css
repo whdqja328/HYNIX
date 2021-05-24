@@ -57,7 +57,7 @@ body {background-color: #050528;}
 #header .gnb_depth .depth_wrap>ul>li>ul>li {overflow: hidden; margin-top: 3px;}
 
 /* container */
-#container {position: relative; transition: all .3s ease;}
+#container {position: relative;}
 #container .slide_wrap {width: 100%; overflow: hidden; position: relative; height: 760px;}
 #container .slide_wrap .main_slogan {position: absolute; top: 350px; left: 50%; width: 1020px; margin-left: -510px; z-index: 10;}
 #container .slide_container {position: relative; margin: 0 auto;}
@@ -66,12 +66,11 @@ body {background-color: #050528;}
 #container .slide img {width: 100%; min-width: 1920px; position: absolute;  height: 760px;}
 
 
-
-#main_slider .slider_pager {position: absolute; top: 650px; left: 280px;}
-#main_slider .slider_pager span {display: inline-block;}
-#main_slider .slider_pager span.active a {background-color: #fff; height: 2px;}
-#main_slider .slider_pager a {display: inline-block; background-color: #ea711d; font-size: 0; width: 41px; height: 1px;}
-
+#container .pagers {display: flex; width: 1020px; margin: 0 auto; position: relative;}
+#container .pager {position: absolute; top: 650px;}
+#container .pager a.on {background: url(../img/btn_pager02.png) no-repeat 0 0;}
+#container .pager a {display: inline-block; background: url(../img/btn_pager01.png) no-repeat 0 0; font-size: 0; width: 41px; height: 21px;}
+#container .pager a:hover {background: url(../img/btn_pager02.png) no-repeat 0 0;}
 /* content */
 #content {background: url(../img/main_sec01.jpg) no-repeat center top; text-align: center; width: 100%; margin: 0 auto; font-family: 'Chakra Petch',sans-serif;}
 #content .newsroom_area {padding: 100px 0 50px 0;}
