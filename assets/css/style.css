@@ -81,13 +81,13 @@
 #content .news_date {font-size: 17px; color: #999; position: absolute; right: 20px; top: 20px;}
 #content .news_more {position: absolute; left: 20px; bottom: 20px; font-size: 18px; color: #999;}
 #content .news_cont {padding-top: 50px; width: 1050px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: flex-start;}
-#content .news_cont li {height: 240px; text-align: left; margin-right: 30px; background-image:linear-gradient(-45deg, transparent 45px, #fff 0); position: relative;}
-#content .news_cont li a {display: block; width: 320px; height: 100%; padding: 20px; color: #111;}
+#content .news_cont li {height: 240px; text-align: left; margin-right: 30px; background-image:linear-gradient(-45deg, transparent 45px, #fff 0); position: relative; width: 320px;}
+#content .news_cont li a {display: block; height: 100%; padding: 20px; color: #111;}
 #content .news_cont .col3,.col4,.col5 {margin-top: 30px;}
-#content .news_cont .conbox {background: url(../img/869670150674700.png) no-repeat right bottom; width: 670px;}
 #content .news_cont .conbox .news_category {color: #ea711d;}
 #content .news_cont .conbox .news_title {font-size: 26px; color: #fff; line-height: 1.25em;}
-#content .news_cont .conbox a {display: block; width: 670px; background: url(../img/main_conbox_lasted_cover.png) no-repeat right bottom; }
+#content .news_cont .conbox {background: url(../img/869670150674700.png) no-repeat right bottom; width: 670px;}
+#content .news_cont .conbox a {display: block; width: 100%; background: url(../img/main_conbox_lasted_cover.png) no-repeat right bottom; }
 #content .news_cont .conbox a:hover {background:linear-gradient(-45deg, transparent 45px, rgba(0,0,0,0.3))}
 #content .news_cont .conbox a:hover .news_category {color: #fff;}
 #content .newsroom_area li:not(.conbox):hover .news_title,
@@ -170,7 +170,29 @@
 
 
 
+@media all and (max-width:1023px){
+	body{overflow-y:scroll;}
+	img{max-width:100%}
 
+	/* layout */
+	#wrap{overflow:hidden;min-width:0}
+	#header{display:none}
+    
+    #container .slide_wrap .main_slogan {top:100px;width:100%;margin-left: 0;left: 0;}
+    #container .pager {top: 350px; left: 30px;}
+    #container .slide_wrap {height: 400px;}
+    #container .slide img {width: 100%; height: 400px;}
+
+    #content .newsroom_area {padding-top: 40px;}
+    #content .news_cont {justify-content: center; width: 70%;}
+    #content .news_cont li {width: 100%;}
+    #content .news_cont .col2,.col3,.col4,.col5 {margin-top: 15px;}
+    #content .news_cont .conbox .news_title {font-size: 18px;}
+    #content .social_area .col4,.col5,.col6 {margin-top: 15px;}
+
+    .shortcut .shortcut_list {width:auto;padding:0 15px;}
+	.gn_area .locate_menu {padding:0 4%;}
+}
 
 
 
