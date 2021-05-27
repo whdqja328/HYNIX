@@ -473,10 +473,10 @@
                         <div class="locate_map">
                             <div class="locate_menu">
                                 <ul>
-                                    <li><a href="#">생산기지</a></li>
-                                    <li><a href="#">연구개발법인</a></li>
-                                    <li><a href="#">판매법인</a></li>
-                                    <li class="on"><a href="#">판매사무소</a></li>
+                                    <li class="loc"><a href="#" data-value="1">생산기지</a></li>
+                                    <li class="loc"><a href="#" data-value="2">연구개발법인</a></li>
+                                    <li class="loc"><a href="#" data-value="3">판매법인</a></li>
+                                    <li class="loc on"><a href="#" data-value="4">판매사무소</a></li>
                                     <li class="more"><a href="#">상세보기</a></li>
                                 </ul>
                             </div>
@@ -484,7 +484,7 @@
                                 <span><img src="assets/img/img_globalmap_01.png" alt=""></span>
                                 <span><img src="assets/img/img_globalmap_02.png" alt=""></span>
                                 <span><img src="assets/img/img_globalmap_03.png" alt=""></span>
-                                <span class="show"><img src="assets/img/img_globalmap_04.png" alt=""></span>
+                                <span class="on"><img src="assets/img/img_globalmap_04.png" alt=""></span>
                             </div>
                         </div>
                     </div>
@@ -513,7 +513,7 @@
         </div>
     </div>
     <!-- //shortcut -->
-    
+
     <!-- footer -->
     <div id="footer">
         <div class="inner">
@@ -635,6 +635,32 @@
                 });
             }
         });
+
+        const $locateMenu = document.querySelectorAll('.locate_menu li a');
+        const $locateImg = document.querySelectorAll('.locate_img span')
+
+        const showImg = function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            let menuIndex = [...$locateMenu].indexOf(e.target);
+            
+            $locateMenu.forEach(menu =>{
+                [...$locateMenu].indexOf(menu) === menuIndex
+                ? menu.parentNode.classList.add('on')
+                : menu.parentNode.classList.remove('on');
+            })
+
+            $locateImg.forEach(cont =>{
+                [...$locateImg].indexOf(cont) === menuIndex
+                ? cont.classList.add('on')
+                : cont.classList.remove('on');
+            })
+        }
+
+        $locateMenu.forEach(menu => {
+            menu.addEventListener('click',showImg)
+        });
+
     </script>
 </body>
 

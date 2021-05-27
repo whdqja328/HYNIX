@@ -135,16 +135,19 @@
 
 
 /* gn_area */
-#content .gn_area {padding-top: 140px; background: url(../img/main_sec04.jpg) no-repeat center top; position: relative;}
-#content .gn_area .inner {top: -30px; padding: 53px 0 0; background-color: #050528;}
-#content .gn_area .locate_menu ul {position: absolute; bottom: 43px; left: 0; right: 0; text-align: center; padding: 0 8%;}
+#content .gn_area {padding-top: 140px; background: url(../img/main_sec04.jpg) no-repeat center top;}
+#content .gn_area .golbal_map {position: relative;}
+#content .gn_area .inner {padding: 53px 0 0; background-color: #050528;}
+#content .gn_area .locate_menu {position: absolute; bottom: 43px; left: 0; right: 0; text-align: center; padding: 0 8%; z-index: 9999;}
 #content .gn_area .locate_menu li {display: inline-block; width: 150px; height: 38px; border-radius: 2px;}
 #content .gn_area .locate_menu li.on a {color: #ea711d; border-bottom: 1px solid #ea711d;}
 #content .gn_area .locate_menu li a {display: block; height: 36px; font-size: 16px; color: #fff; line-height: 34px; text-align: center; margin: 0 5px;}
 #content .gn_area .locate_menu li:last-child a { background: url(../img/arrow_red_bold.png) no-repeat 120px 12px;}
 #content .gn_area .locate_menu li:not(.more) a:hover{color: #ea711d; border-bottom: 1px solid #ea711d;}
-#content .gn_area .locate_img span {display: none;}
-#content .gn_area .locate_img span.show {display: block;}
+#content .gn_area .locate_menu .more {pointer-events: none;}
+#content .gn_area .locate_img {position: relative; height: 616px; background: url(../img/img_globalmap.png) no-repeat 0 0;}
+#content .gn_area .locate_img span {position: absolute; top: 0; left: 0; display: none;}
+#content .gn_area .locate_img span.on {display: block;}
 
 /* shortcut */
 .shortcut {background-color: #5a5a5a;}
