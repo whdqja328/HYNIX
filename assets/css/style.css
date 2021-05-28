@@ -2,7 +2,7 @@
 #wrap {background-color: #050528; min-width: 1020px;}
 
 /* header */
-#header {width: 100%; min-width: 1020px; height: 90px; background-color: rgba(0,0,0,0.6); position: absolute; z-index: 500;}
+#header {width: 100%; height: 90px; background-color: rgba(0,0,0,0.6); position: absolute; z-index: 500;}
 #header.on {background-color: #fff;}
 #header.on .gnb_list > a {color: #111;}
 #header.on .logo a {background: url(../img/logo_on.png);}
@@ -166,7 +166,7 @@
 #footer .footer_info li {display: inline-block;}
 #footer .footer_info li::after {content: ''; display: inline-block; width: 1px; height: 8px; background-color: #808080; margin: 0 15px; bottom: 1px; position: relative;}
 #footer .copy {font-size: 11px; font-weight: 600; display: block; line-height: 18px;}
-#footer .foot_mark {position: absolute; right: 70px;top: 60px;}
+#footer .foot_mark {position: absolute; right: 70px;top: 80px;}
 
 
 
@@ -175,27 +175,39 @@
 	img{max-width:100%}
 
 	/* layout */
-	#wrap{overflow:hidden;min-width:0}
+	#wrap{overflow:hidden; min-width:0}
 	#header{display:none}
     
     #container .slide_wrap .main_slogan {top:100px;width:100%;margin-left: 0;left: 0;}
     #container .pager {top: 350px; left: 30px;}
     #container .slide_wrap {height: 400px;}
-    #container .slide img {width: 100%; height: 400px;}
-
+    #container .slide img {width: 100%; height: 400px; min-width: 768px;}
+    
+    
     #content .newsroom_area {padding-top: 40px;}
-    #content .news_cont {justify-content: center; width: 70%;}
-    #content .news_cont li {width: 100%;}
-    #content .news_cont .col2,.col3,.col4,.col5 {margin-top: 15px;}
+    #content .news_cont {justify-content: center; width: 100%;}
+    #content .news_cont li {margin-top: 15px;}
+    #content .news_cont .col3, .col4, .col5 {margin-top: 15px;}
+    
     #content .news_cont .conbox .news_title {font-size: 18px;}
     #content .social_area .col4,.col5,.col6 {margin-top: 15px;}
-
+    
     .shortcut .shortcut_list {width:auto;padding:0 15px;}
 	.gn_area .locate_menu {padding:0 4%;}
+    .shortcut .inner {padding:2% 4%; width: 100%; text-align: center;}
+    
+    #footer .inner {width: 100%;}
+    #footer .foot_mark {top: 80px;}
 }
 
 
+@media all and (max-width:768px) {
+    #content .newsroom_area {padding-top: 40px;}
+    #content .news_cont {justify-content: center; width: 100%;}
+    #content .news_cont li {width: 100%; margin: 0 auto; margin-top: 15px;}
+    #content .news_cont .conbox {width: 100%;}
 
+}
 
 
 
