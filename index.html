@@ -40,7 +40,9 @@
                 </li>
             </ul>
         </div>
+        <!-- mobile_list -->
         <div class="mobile_list">
+            <!-- m_lmenu -->
             <div class="m_lmenu">
                 <ul class="left_menu">
                     <li class="m_depth1">
@@ -122,7 +124,37 @@
                     <li><a href="#">FAQ</a></li>
                 </ul>
             </div>
+            <!-- //m_lmenu -->
+            <div></div>
+            <!-- m_language -->
+            <div class="m_language">
+                <a href="#" class="close">Language Select Close</a>
+                <ul>
+                    <li class="on"><a href="#">KOREAN</a></li>
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">CHINESE-SIMPLIFIED</a></li>
+                    <li><a href="#">CHINESE-TRADITIONAL</a></li>
+                    <li><a href="#">JAPANESE</a></li>
+                </ul>
+            </div>
+            <!-- //m_language -->
+            <div class="m_search">
+                <a href="#" class="close">Search Close</a>
+                <form name="searchForm">
+                    <fieldset>
+                        <div class="src_box">
+                            <div>
+                                <p>
+                                    <input type="text" class="txt" title="검색어를 입력해주세요" placeholder="검색어를 입력해주세요">
+                                </p>
+                                <input type="submit" class="sch_submit">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </div>
+        <!-- //mobile_list -->
         <!-- header -->
         <div id="header">
             <div class="inner">
@@ -738,8 +770,17 @@
         const $locateMenu = document.querySelectorAll('.locate_menu li a')
         const $locateImg = document.querySelectorAll('.locate_img span')
         const $mMenu = document.querySelectorAll('.m_item_list li a')
-        const $mLeftMenu = document.querySelectorAll('.mobile_list div');
+        const $mLeftMenu = document.querySelectorAll('.mobile_list>div')
+        const $close = document.querySelectorAll('.close')
 
+        
+            for(let i = 0; i < $close.length; i++){
+                $close[i].addEventListener('click',function(e){
+                    e.target.parentNode.classList.remove('on');
+                })
+            }
+        
+        
         const showMenu = function(e){
             e.preventDefault();
 
@@ -756,8 +797,6 @@
                 cont.classList.toggle('on') :
                 cont.classList.remove('on');
             });
-
-
         }
 
         $mMenu.forEach(menu => {
