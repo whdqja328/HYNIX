@@ -26,7 +26,7 @@ h1,h2,h3,h4,h5,h6 {font-size: 13px; font-weight: normal;}
 img,fieldset {border:0 none; vertical-align: top;}
 
 /* 버튼 초기화 */
-button {border: 0;}
+button {border: 0; background: none; cursor: pointer;}
 
 /* 가운데 영역 */
 .container {height: 100%; margin: 0 auto; /*background: rgba(0,0,0,0.6);*/}
