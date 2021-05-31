@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #wrap {background-color: #050528; min-width: 1020px;}
-
+body.on {overflow: hidden;}
 /* header */
 #header {width: 100%; height: 90px; background-color: rgba(0,0,0,0.6); position: absolute; z-index: 500;}
 #header.on {background-color: #fff;}

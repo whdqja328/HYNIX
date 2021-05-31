@@ -810,8 +810,13 @@
             $mLeftMenu.forEach(cont => {
                 [...$mLeftMenu].indexOf(cont) === $mMenuIndex ?
                     cont.classList.toggle('on') :
-                    cont.classList.remove('on');
+                    cont.classList.remove('on');   
             });
+            if(!document.body.classList.contains('on')){
+                document.body.classList.toggle('on')
+            } else {
+                document.body.classList.remove('on');
+            }
         }
 
         $mMenu.forEach(menu => {
