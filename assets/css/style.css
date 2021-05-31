@@ -189,8 +189,8 @@
 .m_lmenu .left_menu .m_depth1 .more {position: absolute; top: 0;right: 20px; width: 30px; height: 50px; text-align: center;}
 .m_lmenu .left_menu .m_depth1 .more::before {content: '+'; font-size: 25px; color: rgba(255,255,255,0.5); line-height: 50px;}
 .m_lmenu .left_menu .m_depth1.on .more::before {content: '-'; font-size: 40px; color: rgba(255,255,255,1); line-height: 0.5em;}
-.m_lmenu .left_menu .m_depth1.on .m_depth2 {display: block;}
-.m_lmenu .left_menu .m_depth2 {background-color: #3c3d40; display: none;}
+.m_lmenu .left_menu .m_depth1.on .m_depth2 {max-height: 400px;}
+.m_lmenu .left_menu .m_depth2 {background-color: #3c3d40; overflow: hidden; max-height:0; transition: max-height .2s;}
 .m_lmenu .left_menu .m_depth2 ul li {border-bottom: 1px solid #575759;}
 .m_lmenu .left_menu .m_depth2 ul li a {padding: 0 30px; font-size: 14px; }
 .mobile_list {display: none;}
@@ -203,6 +203,24 @@
 .m_language ul li:hover a {color: #fff; background-color: #ea711d; text-decoration: underline;}
 .m_language ul li.on a {color: #fff; background-color: #ea711d;}
 .m_language ul li a {display: block; padding: 0 15px;}
+
+
+.m_search {position: fixed; top: 15px; left: 0; width: 100%; height: 100px; z-index: 615; display: none;}
+.m_search.on {display: block;}
+.m_search form,.m_search fieldset {clear: both; margin-bottom: 0; height: 100%;}
+.m_search fieldset .src_box {position: relative; padding: 15px; background-color: #fff;}
+.m_search fieldset .src_box div {position: relative; overflow: hidden; border: 1px solid #ea711d;}
+.m_search fieldset .src_box p {padding: 0 50px 0 15px;}
+.m_search fieldset .src_box input[type=text] {width: 100%; height: 33px; line-height: 33px; margin: 0; padding: 0; border:0; font-weight: bold; font-size: 14px;color: #777; background-color: #fff;}
+
+.m_search fieldset .src_box .sch_submit {overflow: hidden; position: absolute; right: 0; top: 0; width: 33px; height: 33px; border: none; text-indent: -9999px; background: url(../img/icon.png) no-repeat; background-size: 200px 100px; background-position: -116px -37px;}
+
+
+
+
+
+
+
 
 
 .m_lmenu .m_quick {overflow: hidden; margin-top: 26px; padding: 0 20px 0 35px;}

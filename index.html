@@ -767,42 +767,57 @@
             }
         });
 
-        const $locateMenu = document.querySelectorAll('.locate_menu li a')
-        const $locateImg = document.querySelectorAll('.locate_img span')
-        const $mMenu = document.querySelectorAll('.m_item_list li a')
-        const $mLeftMenu = document.querySelectorAll('.mobile_list>div')
-        const $close = document.querySelectorAll('.close')
+        const $locateMenu = document.querySelectorAll('.locate_menu li a');
+        const $locateImg = document.querySelectorAll('.locate_img span');
+        const $mMenu = document.querySelectorAll('.m_item_list li a');
+        const $mLeftMenu = document.querySelectorAll('.mobile_list>div');
+        const $close = document.querySelectorAll('.close');
+        const $depth = document.querySelectorAll('.m_depth1 button');
 
-        
-            for(let i = 0; i < $close.length; i++){
-                $close[i].addEventListener('click',function(e){
-                    e.target.parentNode.classList.remove('on');
-                })
-            }
-        
-        
-        const showMenu = function(e){
+        for (let i = 0; i < $close.length; i++) {
+            $close[i].addEventListener('click', function (e) {
+                e.target.parentNode.classList.remove('on');
+            })
+        }
+
+        const buttonHandler = function(e){
+            e.preventDefault();
+
+            let buttonIndex = [...$depth].indexOf(e.target);
+
+            $depth.forEach(menu =>{
+                [...$depth].indexOf(menu) === buttonIndex ?
+                menu.parentNode.classList.toggle('on') :
+                menu.parentNode.classList.remove('on');
+            })
+        }
+
+        $depth.forEach(menu =>{
+            menu.addEventListener('click',buttonHandler);
+        })
+
+        const showMenu = function (e) {
             e.preventDefault();
 
             let $mMenuIndex = [...$mMenu].indexOf(e.target);
 
             $mMenu.forEach(menu => {
                 [...$mMenu].indexOf(menu) === $mMenuIndex ?
-                menu.parentNode.classList.toggle('on') :
-                menu.parentNode.classList.remove('on');
+                    menu.parentNode.classList.toggle('on') :
+                    menu.parentNode.classList.remove('on');
             });
 
             $mLeftMenu.forEach(cont => {
                 [...$mLeftMenu].indexOf(cont) === $mMenuIndex ?
-                cont.classList.toggle('on') :
-                cont.classList.remove('on');
+                    cont.classList.toggle('on') :
+                    cont.classList.remove('on');
             });
         }
 
         $mMenu.forEach(menu => {
             menu.addEventListener('click', showMenu);
         })
-        
+
         const showImg = function (e) {
             e.preventDefault();
             e.stopPropagation();
