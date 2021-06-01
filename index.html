@@ -777,6 +777,7 @@
         for (let i = 0; i < $close.length; i++) {
             $close[i].addEventListener('click', function (e) {
                 e.target.parentNode.classList.remove('on');
+                document.body.classList.remove('on');
             })
         }
 
