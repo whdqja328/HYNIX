@@ -55,7 +55,7 @@ body.on {overflow: hidden;}
 #header .gnb_depth .depth_wrap>ul>li>ul>li {overflow: hidden; margin-top: 3px;}
 
 /* slider container */
-#container {position: relative; height: 100%;}
+#container {position: relative; min-height: 200px;}
 #container .main_slogan img {width: 461px; height: 135px;}
 #container .slide_wrap {width: 100%; overflow: hidden; position: relative; height: 760px;}
 #container .slide_wrap .main_slogan {position: absolute; top: 350px; left: 50%; width: 1020px; margin-left: -510px; z-index: 10;}
@@ -63,7 +63,7 @@ body.on {overflow: hidden;}
 #container .slide_container.animate {transition: all .5s ease;}
 #container .slide {position: absolute; width: 100%; top: 0; }
 #container .slide img {width: 100%; min-width: 1920px; position: absolute;  height: 760px;}
-#container .pagers {display: flex; width: 1020px; margin: 0 auto; position: relative;}
+#container .pagers { overflow: hidden;width: 100%;max-width: 1020px;margin: 0 auto;}
 #container .pager {position: absolute; top: 650px;}
 #container .pager a.on {background: url(../img/btn_pager02.png) no-repeat 0 0;}
 #container .pager a {display: inline-block; background: url(../img/btn_pager01.png) no-repeat 0 0; font-size: 0; width: 41px; height: 21px;}
@@ -138,8 +138,8 @@ body.on {overflow: hidden;}
 #content .gn_area {padding-top: 140px; background: url(../img/main_sec04.jpg) no-repeat center top;}
 #content .gn_area .golbal_map {position: relative;}
 #content .gn_area .inner {padding: 53px 0 0; background-color: #050528;}
-#content .gn_area .locate_menu {position: absolute; bottom: 43px; left: 0; right: 0; text-align: center; padding: 0 8%; z-index: 9999;}
-#content .gn_area .locate_menu li {display: inline-block; width: 150px; height: 38px; border-radius: 2px;}
+#content .gn_area .locate_menu {position: absolute; bottom: 43px; left: 0; right: 0; text-align: center; padding: 0 8%; z-index: 500;}
+#content .gn_area .locate_menu li {display: inline-block; width: 150px; height: 38px;}
 #content .gn_area .locate_menu li.on a {color: #ea711d; border-bottom: 1px solid #ea711d;}
 #content .gn_area .locate_menu li a {display: block; height: 36px; font-size: 16px; color: #fff; line-height: 34px; text-align: center; margin: 0 5px;}
 #content .gn_area .locate_menu li:last-child a { background: url(../img/arrow_red_bold.png) no-repeat 120px 12px;}
@@ -159,7 +159,7 @@ body.on {overflow: hidden;}
 /* footer */
 #footer {background-color: #050528;}
 #footer .inner {position: relative; width: 1020px; margin: 0 auto; padding: 30px 0 40px 160px; color: #808080;}
-#footer .logo img {position: absolute; left: 0; top: 20px;}
+#footer .logo {position: absolute; left: 0; top: 20px;}
 #footer .policy_list li {padding-bottom: 20px; display: inline-block;}
 #footer .policy_list a {padding: 0 20px 0 0; color: #808080;}
 #footer address {display: block; line-height: 19px; padding-top: 15px; border-top: 1px solid #5a5a5a;}
@@ -168,7 +168,7 @@ body.on {overflow: hidden;}
 #footer .copy {font-size: 11px; font-weight: 600; display: block; line-height: 18px;}
 #footer .foot_mark {position: absolute; right: 70px;top: 80px;}
 
-/* Responsive header */
+/* 모바일 반응형 메뉴 */
 .m_header {display: none; overflow: hidden; width: 100%; min-width: 100%; position: fixed; height: 50px; background: #fff; z-index: 600; border-bottom: 1px solid #ea711d;}
 .m_header .m_item_list li {position: absolute; top: 50%; transform: translateY(-40%);}
 .m_header li.m_menu {left: 14px;}
@@ -214,15 +214,6 @@ body.on {overflow: hidden;}
 .m_search fieldset .src_box input[type=text] {width: 100%; height: 33px; line-height: 33px; margin: 0; padding: 0; border:0; font-weight: bold; font-size: 14px;color: #777; background-color: #fff;}
 
 .m_search fieldset .src_box .sch_submit {overflow: hidden; position: absolute; right: 0; top: 0; width: 33px; height: 33px; border: none; text-indent: -9999px; background: url(../img/icon.png) no-repeat; background-size: 200px 100px; background-position: -116px -37px;}
-
-
-
-
-
-
-
-
-
 .m_lmenu .m_quick {overflow: hidden; margin-top: 26px; padding: 0 20px 0 35px;}
 .m_lmenu .m_quick li {float: left; width: 50%; text-align: center;}
 .m_lmenu .m_quick li a {display: block; margin: 4px 4px; height: 35px; border: 1px solid #707070; line-height: 35px; color: #fff; border-radius: 2px;}
@@ -236,7 +227,6 @@ body.on {overflow: hidden;}
 
 
 @media all and (max-width:1023px){
-	body{overflow-y:scroll;}
 	img{max-width:100%}
 
 	/* layout */
@@ -247,7 +237,7 @@ body.on {overflow: hidden;}
     #container .slide_wrap {height: 400px;}
     #container .slide_wrap .main_slogan {top:100px;width:100%;margin-left: 0;left: 0;}
     #container .pager {top: 350px; left: 30px;}
-    #container .slide img {width: 100%; height: 400px; min-width: 768px;}
+    #container .slide img {width: 100%; height: 400px; min-width: 368px;}
     
     
     #content .newsroom_area {padding-top: 40px;}
@@ -265,25 +255,36 @@ body.on {overflow: hidden;}
     .shortcut .shortcut_list {width:auto;padding:0 15px;}
     .shortcut .inner {padding:2% 4%; width: 100%; text-align: center;}
     .mobile_list {display: block;}
-    #footer .inner {width: 100%;}
+    #footer .inner {width: 100%; padding: 25px 15px 19px 15px;}
     #footer .foot_mark {top: 80px;}
+    #footer .logo {position: static; margin-bottom: 25px;}
 }
-
-@media all and (max-width:963px){
-    #content .gn_area .locate_menu {}
-}
-
 
 @media all and (max-width:768px) {
+    #content .inner {padding: 0 20px;}
     #content .newsroom_area {padding-top: 40px;}
-    #content .news_cont {justify-content: center; width: 100%;}
     #content .news_cont li {width: 100%; margin: 0 auto; margin-top: 15px;}
     #content .news_cont .conbox {width: 100%;}
+    
+    #content .investor_area .ir_left {float: none; width: 100%;}
+    #content .investor_area .ir_right {float: none; width: 100%;}
+    #content .boxwrap .ir_right [class^=item] a {border: none;}
 
-    #content .gn_area .locate_img {height: 510px;}
-
+    #content .gn_area .locate_img {height: 470px;}
+    #content .gn_area .locate_menu li {width: auto;}
+    
+    #footer .inner {color: #fff;}
+    #footer .policy_list a {color: #fff;}
 }
 
+@media all and (max-width:481px) {
+    #container {min-width: 223px;}
+    #container .pager {bottom: 0; right: 0;}
+
+    #content .gn_area .locate_img {height: 310px;}
+    #content .gn_area .locate_menu li a {font-size: 12px; font-weight: bold;}
+    #footer .foot_mark {top: 25px; right: 20px;}
+}
 
 
 

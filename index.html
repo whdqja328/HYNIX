@@ -612,10 +612,22 @@
                                 </ul>
                             </div>
                             <div class="locate_img">
-                                <span><img src="assets/img/img_globalmap_01.png" alt=""></span>
-                                <span><img src="assets/img/img_globalmap_02.png" alt=""></span>
-                                <span><img src="assets/img/img_globalmap_03.png" alt=""></span>
-                                <span class="on"><img src="assets/img/img_globalmap_04.png" alt=""></span>
+                                <span>
+                                    <h5 class="ir_pm">생산기지</h5>
+                                    <img src="assets/img/img_globalmap_01.png" alt="ICHEON, CHEONGJU, CHONGQING, WUXI">
+                                </span>
+                                <span>
+                                    <h5 class="ir_pm">연구개발법인</h5>
+                                    <img src="assets/img/img_globalmap_02.png" alt="MILANO, MINSK, TAIWAN, SAN JOSE">
+                                </span>
+                                <span>
+                                    <h5 class="ir_pm">판매법인</h5>
+                                    <img src="assets/img/img_globalmap_03.png" alt="WEYBRIDGE, RAUNHEIM, WUXI, TOKYO, HONG KONG, NOIDA, TAIWAN, SHANGHAI, SINGAPORE, SAN JOSE">
+                                </span>
+                                <span class="on">
+                                    <h5 class="ir_pm">판매사무소</h5>
+                                    <img src="assets/img/img_globalmap_04.png" alt="DUBLIN, PARIS, HELSINKI, XIAN, CHONGQING, BEIJING, HANOI, PENANG, SHENZHEN, OSAKA, SEATTLE, AUSTIN, HOUSTON, RALEIGH">
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -776,6 +788,7 @@
 
         for (let i = 0; i < $close.length; i++) {
             $close[i].addEventListener('click', function (e) {
+                e.preventDefault();
                 e.target.parentNode.classList.remove('on');
                 document.body.classList.remove('on');
             })
