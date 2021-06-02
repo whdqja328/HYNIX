@@ -133,7 +133,6 @@ body.on {overflow: hidden;}
 #content .boxwrap .ir_right .item_05:hover a {background-image: url(../img/main_icon_05_over.png);}
 #content .boxwrap .ir_right .item_06:hover a {background-image: url(../img/main_icon_06_over.png);}
 
-
 /* gn_area */
 #content .gn_area {padding-top: 140px; background: url(../img/main_sec04.jpg) no-repeat center top;}
 #content .gn_area .golbal_map {position: relative;}
@@ -218,8 +217,8 @@ body.on {overflow: hidden;}
 .m_lmenu .m_quick {overflow: hidden; margin-top: 26px; padding: 0 20px 0 35px;}
 .m_lmenu .m_quick li {float: left; width: 50%; text-align: center;}
 .m_lmenu .m_quick li a {display: block; margin: 4px 4px; height: 35px; border: 1px solid #707070; line-height: 35px; color: #fff; border-radius: 2px;}
-.m_lmenu .m_quick li a:hover {}
 
+/* 미디어쿼리 반응형 */
 @media all and (max-width:1023px){
 	img{max-width:100%}
     body {overflow-y: scroll;}
