@@ -579,7 +579,7 @@
                         <div class="ir_left">
                             <iframe class="EurolandTool"
                                 src="//asia.tools.euroland.com/tools/ticker/html/?companycode=kr-000660&amp;v=big&amp;lang=ko-kr "
-                                id="iframe_id" width="100%" height="270" scrolling="no" frameborder="0"
+                                id="iframe_id" width="100%;" height="270px;" scrolling="no" frameborder="0"
                                 style="max-width:350px;" tabindex="-1"
                                 title="SK하이닉스 주식의 현재가, 주가 등락폭, 등락비율, 월별 주가 변동 그래프 등 실시간 주가 정보를 나타냄"></iframe>
                         </div>
@@ -612,21 +612,23 @@
                                 </ul>
                             </div>
                             <div class="locate_img">
+                                <h5 class="ir_pm">생산기지</h5>
                                 <span>
-                                    <h5 class="ir_pm">생산기지</h5>
                                     <img src="assets/img/img_globalmap_01.png" alt="ICHEON, CHEONGJU, CHONGQING, WUXI">
                                 </span>
+                                <h5 class="ir_pm">연구개발법인</h5>
                                 <span>
-                                    <h5 class="ir_pm">연구개발법인</h5>
                                     <img src="assets/img/img_globalmap_02.png" alt="MILANO, MINSK, TAIWAN, SAN JOSE">
                                 </span>
+                                <h5 class="ir_pm">판매법인</h5>
                                 <span>
-                                    <h5 class="ir_pm">판매법인</h5>
-                                    <img src="assets/img/img_globalmap_03.png" alt="WEYBRIDGE, RAUNHEIM, WUXI, TOKYO, HONG KONG, NOIDA, TAIWAN, SHANGHAI, SINGAPORE, SAN JOSE">
+                                    <img src="assets/img/img_globalmap_03.png"
+                                        alt="WEYBRIDGE, RAUNHEIM, WUXI, TOKYO, HONG KONG, NOIDA, TAIWAN, SHANGHAI, SINGAPORE, SAN JOSE">
                                 </span>
+                                <h5 class="ir_pm">판매사무소</h5>
                                 <span class="on">
-                                    <h5 class="ir_pm">판매사무소</h5>
-                                    <img src="assets/img/img_globalmap_04.png" alt="DUBLIN, PARIS, HELSINKI, XIAN, CHONGQING, BEIJING, HANOI, PENANG, SHENZHEN, OSAKA, SEATTLE, AUSTIN, HOUSTON, RALEIGH">
+                                    <img src="assets/img/img_globalmap_04.png"
+                                        alt="DUBLIN, PARIS, HELSINKI, XIAN, CHONGQING, BEIJING, HANOI, PENANG, SHENZHEN, OSAKA, SEATTLE, AUSTIN, HOUSTON, RALEIGH">
                                 </span>
                             </div>
                         </div>
@@ -794,20 +796,20 @@
             })
         }
 
-        const buttonHandler = function(e){
+        const btnHandler = function (e) {
             e.preventDefault();
 
             let buttonIndex = [...$depth].indexOf(e.target);
 
-            $depth.forEach(menu =>{
+            $depth.forEach(menu => {
                 [...$depth].indexOf(menu) === buttonIndex ?
-                menu.parentNode.classList.toggle('on') :
-                menu.parentNode.classList.remove('on');
+                    menu.parentNode.classList.toggle('on') :
+                    menu.parentNode.classList.remove('on');
             })
         }
 
-        $depth.forEach(menu =>{
-            menu.addEventListener('click',buttonHandler);
+        $depth.forEach(menu => {
+            menu.addEventListener('click', btnHandler);
         })
 
         const showMenu = function (e) {
@@ -824,9 +826,9 @@
             $mLeftMenu.forEach(cont => {
                 [...$mLeftMenu].indexOf(cont) === $mMenuIndex ?
                     cont.classList.toggle('on') :
-                    cont.classList.remove('on');   
+                    cont.classList.remove('on');
             });
-            if(!document.body.classList.contains('on')){
+            if (!document.body.classList.contains('on')) {
                 document.body.classList.toggle('on')
             } else {
                 document.body.classList.remove('on');

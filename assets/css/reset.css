@@ -7,7 +7,7 @@ fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption,a
 
 /* a 링크 초기화 */
 a {color: #222; text-decoration: none;}
-a:hover {color: #ea711d;}
+a:hover {color: #ea711d; text-decoration: underline;}
 
 /* 폰트 초기화 */
 body, input, textarea, select, button, table {

@@ -143,7 +143,7 @@ body.on {overflow: hidden;}
 #content .gn_area .locate_menu li.on a {color: #ea711d; border-bottom: 1px solid #ea711d;}
 #content .gn_area .locate_menu li a {display: block; height: 36px; font-size: 16px; color: #fff; line-height: 34px; text-align: center; margin: 0 5px;}
 #content .gn_area .locate_menu li:last-child a { background: url(../img/arrow_red_bold.png) no-repeat 120px 12px;}
-#content .gn_area .locate_menu li:not(.more) a:hover{color: #ea711d; border-bottom: 1px solid #ea711d;}
+#content .gn_area .locate_menu li:not(.more) a:hover{color: #ea711d; border-bottom: 1px solid #ea711d; text-decoration: none;}
 #content .gn_area .locate_menu .more {cursor: pointer;}
 #content .gn_area .locate_menu .more a {pointer-events: none;}
 #content .gn_area .locate_img {position: relative; height: 616px; background: url(../img/img_globalmap.png) no-repeat 0 0;}
@@ -191,8 +191,9 @@ body.on {overflow: hidden;}
 .m_lmenu .left_menu .m_depth1.on .more::before {content: '-'; font-size: 40px; color: rgba(255,255,255,1); line-height: 0.5em;}
 .m_lmenu .left_menu .m_depth1.on .m_depth2 {max-height: 400px;}
 .m_lmenu .left_menu .m_depth2 {background-color: #3c3d40; overflow: hidden; max-height:0; transition: max-height .2s;}
-.m_lmenu .left_menu .m_depth2 ul li {border-bottom: 1px solid #575759;}
-.m_lmenu .left_menu .m_depth2 ul li a {padding: 0 30px; font-size: 14px; }
+.m_lmenu .left_menu .m_depth2 li {border-bottom: 1px solid #575759;}
+.m_lmenu .left_menu .m_depth2 a {padding: 0 30px; font-size: 14px;}
+.m_lmenu .left_menu .m_depth2 a:hover {text-decoration: underline;}
 .mobile_list {display: none;}
 .mobile_list .close {display:block;float:right;width:35px;height:35px;background-color:#858585;background-position:-78px -27px;overflow:hidden;text-indent:-9999px;background-image:url(../img/icon.png);background-repeat:no-repeat;background-size:200px 100px}
 .m_language {position: fixed; top: 15px; right: 0; z-index: 610; display: none;}
@@ -217,14 +218,7 @@ body.on {overflow: hidden;}
 .m_lmenu .m_quick {overflow: hidden; margin-top: 26px; padding: 0 20px 0 35px;}
 .m_lmenu .m_quick li {float: left; width: 50%; text-align: center;}
 .m_lmenu .m_quick li a {display: block; margin: 4px 4px; height: 35px; border: 1px solid #707070; line-height: 35px; color: #fff; border-radius: 2px;}
-
-
-
-
-
-
-
-
+.m_lmenu .m_quick li a:hover {}
 
 @media all and (max-width:1023px){
 	img{max-width:100%}
