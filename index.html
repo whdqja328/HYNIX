@@ -828,18 +828,26 @@
                     cont.classList.toggle('on') :
                     cont.classList.remove('on');
             });
-            if (!document.body.classList.contains('on')) {
-                document.body.classList.toggle('on')
-            } else {
-                document.body.classList.remove('on');
-            }
+
+            !document.body.classList.contains('on') ?
+            document.body.classList.toggle('on') :
+            document.body.classList.remove('on');
         }
+
+        window.addEventListener('resize',()=>{
+            if(window.innerWidth < 1023){
+                document.body.classList.remove('on');
+                for(let i = 0; i < $mLeftMenu.length; i++){
+                    $mLeftMenu[i].classList.remove('on')
+                }
+            }
+        })
 
         $mMenu.forEach(menu => {
             menu.addEventListener('click', showMenu);
         })
 
-        const showImg = function (e) {
+        const showImg = (e) => {
             e.preventDefault();
             e.stopPropagation();
             let menuIndex = [...$locateMenu].indexOf(e.target);
