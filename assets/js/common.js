@@ -16,6 +16,7 @@ for (let i = 0; i < $gnbList.length; i++) {
     $gnbList[i].addEventListener("mouseleave", removeClass);
 }
 
+
 $gnb.addEventListener("mouseenter", () => {
     $header.classList.add("on");
 });
@@ -25,7 +26,7 @@ $gnb.addEventListener("mouseleave", () => {
 
 // 슬라이더
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     const slideWrap = document.querySelector(".slide_wrap"),
         slideContainer = document.querySelector(".slide_container"),
         slides = document.querySelectorAll(".slide"),

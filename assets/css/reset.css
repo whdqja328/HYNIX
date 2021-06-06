@@ -5,7 +5,7 @@ fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption,a
 
 /* a 링크 초기화 */
 a { color: #222; text-decoration: none; } 
-a:hover { color: #ea711d; text-decoration: underline; } 
+a:hover { color: #ea711d; } 
 
 /* 폰트 초기화 */
 body, input, textarea, select, button, table { font-family:'Chakra Petch','NanumSquare','맑은 고딕','Malgun Gothic',Dotum,'돋움',sans-serif; color: #222; font-size: 13px; line-height: 1.5em; } 
