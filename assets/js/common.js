@@ -1,7 +1,6 @@
 // 헤더메뉴
 const $gnbList = document.querySelectorAll(".gnb_list");
 const $header = document.querySelector("#header");
-const $gnb = document.querySelector(".gnb");
 
 const addClass = (e) => {
     e.target.classList.add("on");
@@ -11,18 +10,23 @@ const removeClass = (e) => {
     e.target.classList.remove("on");
 };
 
-for (let i = 0; i < $gnbList.length; i++) {
-    $gnbList[i].addEventListener("mouseenter", addClass);
-    $gnbList[i].addEventListener("mouseleave", removeClass);
+$gnbList.forEach(menu=>{
+    menu.addEventListener('mouseenter',addClass)
+    menu.addEventListener('mouseleave',removeClass)
+})
+
+function gnbHandeler (){
+    const $gnb = document.querySelector('.gnb')
+    $gnb.addEventListener('mouseenter',()=>{
+        $header.classList.add('on')
+    })
+
+    $gnb.addEventListener('mouseleave',()=>{
+        $header.classList.remove('on')
+    })
 }
 
-
-$gnb.addEventListener("mouseenter", () => {
-    $header.classList.add("on");
-});
-$gnb.addEventListener("mouseleave", () => {
-    $header.classList.remove("on");
-});
+gnbHandeler();
 
 // 슬라이더
 document.addEventListener("DOMContentLoaded", () => {

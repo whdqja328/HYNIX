@@ -2,7 +2,7 @@
 #wrap { background-color: #050528; min-width: 1020px; } 
 body.on { overflow: hidden;} 
 /* header */
-#header { width: 100%; height: 90px; background-color: rgba(0,0,0,0.6); position: absolute; z-index: 500; } 
+#header {min-width: 1020px; width: 100%; height: 90px; top: 0; z-index: 500; position: absolute; background-color: rgba(0,0,0,0.3); } 
 #header.on { background-color: #fff; } 
 #header.on .gnb_list > a { color: #111; } 
 #header.on .logo a { background: url(../img/logo_on.png); } 
@@ -10,14 +10,15 @@ body.on { overflow: hidden;}
 #header.on .gnb_right .sitemap { z-index: 9999; background-color: #050528; } 
 
 /* gnb */
-#header .inner { width: 1020px; margin: 0 auto; height: 90px; position: relative;} 
+#header .inner { width: 1020px; height: 0; margin: 0 auto;  position: relative; } 
 #header .logo {width: 87px; height: 46px; position: absolute; top: 15px; z-index: 2; left: 0;} 
 #header .logo a { display: inline-block; width: 87px; height: 45px; background: url(../img/logo_w.png); } 
-#header .gnb {padding-left: 140px; height: 90px;} 
-#header .gnb_list { float: left; width: 150px; } 
+#header .gnb {width: 1020px; margin: 0 auto; height: 90px; } 
+#header .gnb_list {float: left; width: 150px; } 
+#header .gnb_list:first-child {margin-left: 150px; } 
 #header .gnb_list > a { display: block; letter-spacing: 0.025em; padding: 36px 0 0; height: 90px; font-weight: bold; font-size: 15px; color: #fff; text-align: center; } 
 #header .gnb_list > a:hover,#header .gnb_list > a:focus { color: #ea711d; border-bottom: 2px solid #ea711d; } 
-#header .gnb_right {position: absolute; right: 0; top: 0; } 
+#header .gnb_right {position: absolute; right: 0; top: 0; z-index: 500; } 
 #header .gnb_right>li { position: relative; width: 90px; height: 90px; margin: 2px 0 0 15px; background-color: rgba(0,0,0,0.6); } 
 #header .gnb_right>li>a { display: block; font-size: 12px; width: 90px; height: 90px; line-height: 20px; color: #fff; text-align: center; padding-top: 60px; } 
 #header .gnb_right>li:first-child { margin-top: 0; background: none; z-index: 9999; } 
@@ -42,13 +43,13 @@ body.on { overflow: hidden;}
 #header .gnb_right .lang_box li a { color: #ea711d; line-height: 50px; } 
 
 /* gnb sub */
-#header .gnb_depth { position: fixed; top: 90px; left: 0; width: 100%; display: none; background: #ebf2f2; } 
-#header .gnb_list.on .gnb_depth { display: block; height: 361px; } 
-#header .gnb_depth > div { position: relative; padding: 15px 0 16px; margin: 0 auto; width: 1020px; } 
+#header .gnb_depth { position: absolute; top: 90px; left: 0; width: 100%;  display: none; z-index: 500; background: #ebf2f2; } 
+#header .gnb_list.on .gnb_depth {height: 361px; display: block;} 
+#header .gnb_depth > div { position: relative; padding: 10px 0 20px; margin: 0 auto; width: 1020px; } 
 #header .gnb_depth .sub_tit { position: absolute; left: 0; font-size: 22px; line-height: 45px; } 
 #header .gnb_depth .depth_wrap { margin-left: 166px; } 
 #header .gnb_depth .depth_wrap ul { margin: 5px 0; } 
-#header .gnb_depth .depth_wrap>ul>li { float: left; width: 212px; height: 100%; padding: 0 12px 20px; } 
+#header .gnb_depth .depth_wrap>ul>li { float: left; width: 212px; height: 100%; padding: 0 20px;} 
 #header .gnb_depth .depth_wrap li.clear { clear: both; } 
 #header .gnb_depth .depth_wrap>ul>li>a { display: block; line-height: 16px; padding: 8px 0; font-weight: 600; border-bottom: 1px solid #ddd; letter-spacing: 0.01em; } 
 #header .gnb_depth .depth_wrap>ul>li>ul { margin-top: 8px; } 
@@ -56,9 +57,9 @@ body.on { overflow: hidden;}
 
 /* slider container */
 #container { position: relative; min-height: 200px; } 
-#container .main_slogan img { width: 461px; height: 135px; } 
 #container .slide_wrap { width: 100%; overflow: hidden; position: relative; height: 760px; } 
 #container .slide_wrap .main_slogan { position: absolute; top: 350px; left: 50%; width: 1020px; margin-left: -510px; z-index: 10; } 
+#container .main_slogan img { width: 461px; height: 135px; } 
 #container .slide_container { position: relative; margin: 0 auto; } 
 #container .slide_container.animate { transition: all .5s ease; } 
 #container .slide { position: absolute; width: 100%; top: 0; } 
