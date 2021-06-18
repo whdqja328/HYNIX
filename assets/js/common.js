@@ -15,7 +15,7 @@ $gnbList.forEach(menu=>{
     menu.addEventListener('mouseleave',removeClass)
 })
 
-function gnbHandeler (){
+const gnbHandeler = ()=>{
     const $gnb = document.querySelector('.gnb')
     $gnb.addEventListener('mouseenter',()=>{
         $header.classList.add('on')
@@ -27,6 +27,7 @@ function gnbHandeler (){
 }
 
 gnbHandeler();
+
 
 // 슬라이더
 document.addEventListener("DOMContentLoaded", () => {
@@ -95,31 +96,30 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // gn_area 탭메뉴
-const $locateMenu = document.querySelectorAll(".locate_menu li a");
+const $locateMenuContainer = document.querySelector(".locate_menu ul");
 const $locateImg = document.querySelectorAll(".locate_img span");
 
-const showImg = (e) => {
+$locateMenuContainer.addEventListener('click',(e)=>{
     e.preventDefault();
-    e.stopPropagation();
-    let menuIndex = [...$locateMenu].indexOf(e.target);
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null){
+        return;
+    }
 
-    $locateMenu.forEach((menu) => {
-        [...$locateMenu].indexOf(menu) === menuIndex ?
-            menu.parentNode.classList.add("on") :
-            menu.parentNode.classList.remove("on");
-    });
+    const active = document.querySelector('.loc.on')
+    if(active != null){
+        active.classList.remove('on')
+    }
+    e.target.parentNode.classList.add('on')
+    $locateImg.forEach(img=>{
+        if(filter === img.dataset.type){
+            img.classList.add('on')
+        }else {
+            img.classList.remove('on')
+        }
+    })
+})
 
-
-    $locateImg.forEach((cont) => {
-        [...$locateImg].indexOf(cont) === menuIndex ?
-            cont.classList.add("on") :
-            cont.classList.remove("on");
-    });
-};
-
-$locateMenu.forEach((menu) => {
-    menu.addEventListener("click", showImg);
-});
 
 // 반응형 메뉴
 const $mLeftMenu = document.querySelectorAll(".mobile_list>div");
@@ -127,13 +127,13 @@ const $mMenu = document.querySelectorAll(".m_item_list li a");
 const $depth = document.querySelectorAll(".m_depth1 button");
 const $close = document.querySelectorAll(".close");
 
-for (let i = 0; i < $close.length; i++) {
-    $close[i].addEventListener("click", (e) => {
-        e.preventDefault();
-        e.target.parentNode.classList.remove("on");
+$close.forEach(shut=>{
+    shut.addEventListener('click',()=>{
+        shut.parentNode.classList.remove('on');
         document.body.classList.remove("on");
-    });
-}
+    })
+})
+
 
 const showMenu = (e) => {
     e.preventDefault();
